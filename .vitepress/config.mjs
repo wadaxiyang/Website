@@ -6,16 +6,44 @@ export default defineConfig({
   head: [["link", { rel: "icon", href: "Blog.svg" }]],
   title: "wadaxiyangのBLOG",
   description: "Personal Blog",
+  lastUpdated: true,
   themeConfig: {
     outlineTitle: "Contents",
     outline: [2, 6],
     // https://vitepress.dev/reference/default-theme-config
     nav: [
       { text: 'Home', link: '/' },
-      { text: 'Examples', link: '/notes/radar/test' }
+      { text: 'vitepress usage', link: '/notes/vitepress/' },
+      { text: 'Sparse Matrix', link: '/notes/radar/' }
     ],
 
-    sidebar: { "/notes/radar": set_sidebar("/notes/radar") }, //自动路由sidebar
+    sidebar: {
+      '/notes/vitepress':[
+        {
+          text: 'Guide',
+          collapsed: false,
+          items: set_sidebar("/notes/vitepress/Guide")
+        },
+        {
+          text: 'Reference',
+          collapsed: false,
+          items: set_sidebar("/notes/vitepress/Reference")
+        }
+      ],
+      '/notes/radar':[
+        {
+          text: 'Sparse Matrix',
+          collapsed: false,
+          items: set_sidebar("/notes/radar/SparseMatrix")
+        },
+        {
+          text: 'DOA',
+          collapsed: false,
+          items: set_sidebar("/notes/radar/DOA")
+        },
+      ],   
+    }, //自动路由sidebar
+
     // sidebar: false, // 关闭侧边栏
     // aside: "left", // 设置右侧侧边栏在左侧显示
 
