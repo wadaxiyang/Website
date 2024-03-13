@@ -188,3 +188,6 @@ export default {
   }
 }
 ```
+
+## Reference
+[vitepress](https://vitepress.dev/reference/default-theme-sidebar#collapsible-sidebar-groups)
