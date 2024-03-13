@@ -1,0 +1,96 @@
+/* var.css */
+:root {
+    --vp-c-brand-1: #18794e;
+    --vp-c-brand-2: #299764;
+    --vp-c-brand-3: #30a46c;
+}
+  
+.dark {
+--vp-c-brand-1: #3dd68c;
+--vp-c-brand-2: #30a46c;
+--vp-c-brand-3: #298459;
+}
+  /* 以前的vp-c-brand已弃用 */
+
+:root {
+/* 标题 */
+--vp-home-hero-name-color: transparent;
+--vp-home-hero-name-background: linear-gradient( 135deg, #92FFC0 10%, #002661 100%);
+/* --vp-home-hero-name-background: linear-gradient( 135deg, #79F1A4 10%, #0E5CAD 100%); */
+/* 图标背景 */
+--vp-home-hero-image-background-image: linear-gradient( 135deg, #92FFC0 10%, #002661 100%);
+--vp-home-hero-image-filter: blur(100px);
+}
+
+h1 {
+    background: -webkit-linear-gradient(135deg, #79F1A4 10%, #0E5CAD 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  
+  }
+
+
+
+/* 提示框背景颜色 */
+:root {
+    --vp-custom-block-tip-bg: var(--vp-c-green-soft);
+  }
+  
+  /* 提示框 */
+  .custom-block.tip {
+    border-color: var(--vp-c-green-2);
+  }
+  
+  /* 警告框 */
+  .custom-block.warning {
+    /* border-color: #d97706; */
+    border-color: var(--vp-c-yellow-2);
+  }
+  
+  /* 危险框 */
+  .custom-block.danger {
+    /* border-color: #f43f5e; */
+    border-color: var(--vp-c-red-2);
+  }
+
+
+  /* 自定义侧边栏在最左边，右边撑满宽度 */
+.VPDoc .container {
+    margin: 0 !important;
+  }
+  @media (min-width: 960px) {
+    .VPDoc:not(.has-sidebar) .content {
+      max-width: 1552px !important;
+    }
+  }
+  .VPDoc.has-aside .content-container {
+    max-width: 1488px !important;
+  }
+  @media (min-width: 960px) {
+    .VPDoc:not(.has-sidebar) .container {
+      display: flex;
+      justify-content: center;
+      max-width: 1562px !important;
+    }
+  }
+  .aside-container {
+    position: fixed;
+    top: 0;
+    padding-top: calc(
+      var(--vp-nav-height) + var(--vp-layout-top-height, 0px) +
+        var(--vp-doc-top-height, 0px) + 10px
+    ) !important;
+    width: 224px;
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+    scrollbar-width: none;
+  }
+  
+  /* 自定义h2的间距 */
+  .vp-doc h2 {
+    margin: 0px 0 16px;
+    padding-top: 24px;
+    border: none;
+  }
