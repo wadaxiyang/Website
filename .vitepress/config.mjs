@@ -2,8 +2,8 @@ import { defineConfig } from 'vitepress'
 import { set_sidebar } from "./utils/auto_sidebar.js";	// 改成自己的路径
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-  // base: "/Website/",
-  head: [["link", { rel: "icon", href: "bilibili.svg" }]],
+  base: "/Website/",
+  head: [["link", { rel: "icon", href: "/Website/Blog.svg" }]],
   title: "wadaxiyangのBLOG",
   description: "Personal Blog",
   themeConfig: {
