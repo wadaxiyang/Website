@@ -2,8 +2,8 @@ import { defineConfig } from 'vitepress'
 import { set_sidebar } from "./utils/auto_sidebar.js";	// 改成自己的路径
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-  base: "/Website/",
-  head: [["link", { rel: "icon", href: "/Website/bilibili.svg" }]],
+  // base: "/Website/",
+  head: [["link", { rel: "icon", href: "bilibili.svg" }]],
   title: "wadaxiyangのBLOG",
   description: "Personal Blog",
   themeConfig: {
@@ -12,12 +12,12 @@ export default defineConfig({
     // https://vitepress.dev/reference/default-theme-config
     nav: [
       { text: 'Home', link: '/' },
-      { text: 'Examples', link: '/notes/radar/' }
+      { text: 'Examples', link: '/notes/radar/test' }
     ],
 
-    // sidebar: { "/notes/radar": set_sidebar("/notes/radar") }, //自动路由sidebar
-    sidebar: false, // 关闭侧边栏
-    aside: "left", // 设置右侧侧边栏在左侧显示
+    sidebar: { "/notes/radar": set_sidebar("/notes/radar") }, //自动路由sidebar
+    // sidebar: false, // 关闭侧边栏
+    // aside: "left", // 设置右侧侧边栏在左侧显示
 
     socialLinks: [
       { icon: 'github', link: 'https://github.com/wadaxiyang' },

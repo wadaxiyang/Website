@@ -7,8 +7,8 @@ hero:
   text: ""
   tagline: Where there is life, there is learning.
   image:
-    src: ./bilibili.svg
-    alt: 123
+    src: ./bac.png
+    alt: background
   actions:
     - theme: brand
       text: Introduction
