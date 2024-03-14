@@ -9,7 +9,7 @@ import "vitepress-markdown-timeline/dist/theme/index.css";
 import googleAnalytics from 'vitepress-plugin-google-analytics'
 import mediumZoom from 'medium-zoom';
 import { onMounted, watch, nextTick } from 'vue';
-import { useLive2d } from 'vitepress-theme-website'
+// import { useLive2d } from 'vitepress-theme-website'
 
 
 /** @type {import('vitepress').Theme} */
