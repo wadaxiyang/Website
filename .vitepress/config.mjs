@@ -4,7 +4,7 @@ import timeline from "vitepress-markdown-timeline";
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   // base: "/Website/",
-  head: [["link", { rel: "icon", href: "/Website/Blog.svg" }]],
+  head: [["link", { rel: "icon", href: "https://github.com/wadaxiyang/Website/blob/master/public/Blog.svg" }]],
   title: "wadaxiyangのBLOG",
   description: "Personal Blog",
   lastUpdated: true,
