@@ -11,6 +11,9 @@ devDependencies:
   vitepress:
     specifier: 1.0.0-rc.45
     version: 1.0.0-rc.45(@algolia/client-search@4.22.1)(less@4.2.0)(search-insights@2.13.0)
+  vitepress-plugin-comment-with-giscus:
+    specifier: ^1.1.12
+    version: 1.1.12(vue@3.4.21)
   vue:
     specifier: ^3.4.21
     version: 3.4.21
@@ -428,8 +431,27 @@ packages:
     dev: true
     optional: true
 
+  /@giscus/vue@2.4.0(vue@3.4.21):
+    resolution: {integrity: sha512-QOxKHgsMT91myyQagP2v20YYAei1ByZuc3qcaYxbHx4AwOeyVrybDIuRFwG9YDv6OraC86jYnU4Ixd37ddC/0A==, tarball: https://registry.npmmirror.com/@giscus/vue/-/vue-2.4.0.tgz}
+    peerDependencies:
+      vue: '>=3.2.0'
+    dependencies:
+      giscus: 1.5.0
+      vue: 3.4.21
+    dev: true
+
   /@jridgewell/sourcemap-codec@1.4.15:
     resolution: {integrity: sha512-eF2rxCRulEKXHTRiDrDy6erMYWqNw4LPdQ8UQA4huuxaQsVeRPFl2oM8oDGxMFhJUWZf9McpLtJasDDZb/Bpeg==, tarball: https://registry.npmmirror.com/@jridgewell/sourcemap-codec/-/sourcemap-codec-1.4.15.tgz}
+    dev: true
+
+  /@lit-labs/ssr-dom-shim@1.2.0:
+    resolution: {integrity: sha512-yWJKmpGE6lUURKAaIltoPIE/wrbY3TEkqQt+X0m+7fQNnAv0keydnYvbiJFP1PnMhizmIWRWOG5KLhYyc/xl+g==, tarball: https://registry.npmmirror.com/@lit-labs/ssr-dom-shim/-/ssr-dom-shim-1.2.0.tgz}
+    dev: true
+
+  /@lit/reactive-element@2.0.4:
+    resolution: {integrity: sha512-GFn91inaUa2oHLak8awSIigYz0cU0Payr1rcFsrkf5OJ5eSPxElyZfKh0f2p9FsTiZWXQdWGJeXZICEfXXYSXQ==, tarball: https://registry.npmmirror.com/@lit/reactive-element/-/reactive-element-2.0.4.tgz}
+    dependencies:
+      '@lit-labs/ssr-dom-shim': 1.2.0
     dev: true
 
   /@rollup/rollup-android-arm-eabi@4.13.0:
@@ -568,6 +590,10 @@ packages:
 
   /@types/mdurl@1.0.5:
     resolution: {integrity: sha512-6L6VymKTzYSrEf4Nev4Xa1LCHKrlTlYCBMTlQKFuddo1CvQcE52I0mwfOJayueUC7MJuXOeHTcIU683lzd0cUA==, tarball: https://registry.npmmirror.com/@types/mdurl/-/mdurl-1.0.5.tgz}
+    dev: true
+
+  /@types/trusted-types@2.0.7:
+    resolution: {integrity: sha512-ScaPdn1dQczgbl0QFTeTOmVHFULt394XJgOQNoyVhZ6r2vLnMLJfBPd53SB52T/3G36VI1/g2MZaX0cwDuXsfw==, tarball: https://registry.npmmirror.com/@types/trusted-types/-/trusted-types-2.0.7.tgz}
     dev: true
 
   /@types/web-bluetooth@0.0.20:
@@ -852,6 +878,12 @@ packages:
     dev: true
     optional: true
 
+  /giscus@1.5.0:
+    resolution: {integrity: sha512-t3LL0qbSO3JXq3uyQeKpF5CegstGfKX/0gI6eDe1cmnI7D56R7j52yLdzw4pdKrg3VnufwCgCM3FDz7G1Qr6lg==, tarball: https://registry.npmmirror.com/giscus/-/giscus-1.5.0.tgz}
+    dependencies:
+      lit: 3.1.2
+    dev: true
+
   /graceful-fs@4.2.11:
     resolution: {integrity: sha512-RbJ5/jmFcNNCcDV5o9eTnBLJ/HszWV0P73bc+Ff4nS/rJj+YaS6IGyiOL0VoBYX+l1Wrl3k63h/KrH+nhJ0XvQ==, tarball: https://registry.npmmirror.com/graceful-fs/-/graceful-fs-4.2.11.tgz}
     requiresBuild: true
@@ -899,6 +931,28 @@ packages:
       mime: 1.6.0
       needle: 3.3.1
       source-map: 0.6.1
+    dev: true
+
+  /lit-element@4.0.4:
+    resolution: {integrity: sha512-98CvgulX6eCPs6TyAIQoJZBCQPo80rgXR+dVBs61cstJXqtI+USQZAbA4gFHh6L/mxBx9MrgPLHLsUgDUHAcCQ==, tarball: https://registry.npmmirror.com/lit-element/-/lit-element-4.0.4.tgz}
+    dependencies:
+      '@lit-labs/ssr-dom-shim': 1.2.0
+      '@lit/reactive-element': 2.0.4
+      lit-html: 3.1.2
+    dev: true
+
+  /lit-html@3.1.2:
+    resolution: {integrity: sha512-3OBZSUrPnAHoKJ9AMjRL/m01YJxQMf+TMHanNtTHG68ubjnZxK0RFl102DPzsw4mWnHibfZIBJm3LWCZ/LmMvg==, tarball: https://registry.npmmirror.com/lit-html/-/lit-html-3.1.2.tgz}
+    dependencies:
+      '@types/trusted-types': 2.0.7
+    dev: true
+
+  /lit@3.1.2:
+    resolution: {integrity: sha512-VZx5iAyMtX7CV4K8iTLdCkMaYZ7ipjJZ0JcSdJ0zIdGxxyurjIn7yuuSxNBD7QmjvcNJwr0JS4cAdAtsy7gZ6w==, tarball: https://registry.npmmirror.com/lit/-/lit-3.1.2.tgz}
+    dependencies:
+      '@lit/reactive-element': 2.0.4
+      lit-element: 4.0.4
+      lit-html: 3.1.2
     dev: true
 
   /magic-string@0.30.8:
@@ -1114,6 +1168,14 @@ packages:
       rollup: 4.13.0
     optionalDependencies:
       fsevents: 2.3.3
+    dev: true
+
+  /vitepress-plugin-comment-with-giscus@1.1.12(vue@3.4.21):
+    resolution: {integrity: sha512-kUN0NraWXG27BnArVCveZUEpWahT5tT+DFLXRcnuoAtiYfu8qJ/lo/mdzjdSuqFMCWVHjCEx6vVYbVMQKPnRHQ==, tarball: https://registry.npmmirror.com/vitepress-plugin-comment-with-giscus/-/vitepress-plugin-comment-with-giscus-1.1.12.tgz}
+    dependencies:
+      '@giscus/vue': 2.4.0(vue@3.4.21)
+    transitivePeerDependencies:
+      - vue
     dev: true
 
   /vitepress@1.0.0-rc.45(@algolia/client-search@4.22.1)(less@4.2.0)(search-insights@2.13.0):
