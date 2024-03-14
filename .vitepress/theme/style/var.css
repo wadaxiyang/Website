@@ -94,3 +94,16 @@ h1 {
     padding-top: 24px;
     border: none;
   }
+
+
+  /* 定义图片缩放 */
+
+  .medium-zoom-overlay {
+    z-index: 20;
+  }
+  
+  .medium-zoom-image {
+    z-index: 9999 !important;/* 给的值是21，但是实测盖不住，直接999 */
+  }
+
+  

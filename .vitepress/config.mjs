@@ -1,5 +1,6 @@
 import { defineConfig } from 'vitepress'
 import { set_sidebar } from "./utils/auto_sidebar.js";	// 改成自己的路径
+import timeline from "vitepress-markdown-timeline"; 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   // base: "/Website/",
@@ -7,6 +8,15 @@ export default defineConfig({
   title: "wadaxiyangのBLOG",
   description: "Personal Blog",
   lastUpdated: true,
+  markdown: { 
+    //行号显示
+    lineNumbers: true, 
+
+    //时间线
+    config: (md) => {
+      md.use(timeline);
+    },
+  }, 
   themeConfig: {
     outlineTitle: "Contents",
     outline: [2, 6],
